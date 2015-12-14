@@ -3,7 +3,23 @@
 // bower:scss
 // endbower
 
+html, body{
+  min-height: 100%;
+}
 
+.background{
+  background: url(../img/bg.jpg) 50% 50% no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+.margin{
+  margin: 5% 10%;
+}
+.text{
+  color: #fff7b2;
+  text-shadow: 1px 1px 1px #000;
+}
 
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */

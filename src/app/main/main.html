@@ -1,3 +1,10 @@
-<div ng-controller="MainController">
-  <ui-view></ui-view>
+<div ng-controller="MainController" ng-keydown="keydown()">
+  <div ng-if="showCover" class="cover-bg background">
+    <h1 class="cover-text">Капитал шоу <br/> Своя <br/> Когда <br/> Миллионером</h1>
+  </div>
+  <div class="margin">
+    <a class="main-item text" ui-sref="question({path: item.path})" ng-repeat="item in dataQuestion">
+      {{item.mainDisp}}
+    </a>
+  </div>
 </div>
