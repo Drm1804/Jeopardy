@@ -3,12 +3,16 @@
     <h1 class="cover-text">Капитал шоу <br/> Своя <br/> Когда <br/> Миллионером</h1>
   </div>
   <div class="margin">
-    <div ng-if="step1" class="step">1</div>
-    <div ng-if="step2" class="step">2</div>
-    <div ng-if="step3" class="step">3</div>
-    <div ng-if="step4" class="step">4</div>
+    <div ng-if="steps.step1.show" class="step background">
+      <div class="step-table" ng-bind-html="steps.step1.content"></div>
+    </div>
+    <div ng-if="steps.step2.show" class="step background">
+      <div class="step-table" ng-bind-html="steps.step2.content"></div>
+    </div>
+    </div>
+    <div ng-if="steps.step3.show" class="step background">3</div>
+    <div ng-if="steps.step4.show" class="step background">4</div>
   </div>
-
 
 
 </div>

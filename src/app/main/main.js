@@ -7,17 +7,11 @@ angular.module('jeopardy')
       })
   })
   .controller('MainController', function ($scope, $rootScope, hotkeys, $platform) {
-    $scope.showCover = true;
+
     $scope.dataQuestion = {};
 
 
-    $rootScope.$on('showCowerBackground', function(){
-      if($scope.showCover){
-        $scope.showCover = false;
-      } else {
-        $scope.showCover = true;
-      }
-    });
+
 
     $scope.getData = function(){
       $platform.returnData()
