@@ -10,6 +10,7 @@ angular.module('jeopardy')
   })
   .controller('QuestionController', function($scope, $rootScope, hotkeys, $state, QuestionContentFactory){
     $scope.showCover = false;
+
     $rootScope.$on('showCowerBackground', function(){
       if($scope.showCover){
         $scope.showCover = false;
