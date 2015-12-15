@@ -8,7 +8,16 @@ angular.module('jeopardy')
         templateUrl: 'app/question/question.html'
       })
   })
-  .controller('QuestionController', function($scope, hotkeys, $state, QuestionContentFactory){
+  .controller('QuestionController', function($scope, $rootScope, hotkeys, $state, QuestionContentFactory){
+    $scope.showCover = false;
+    $rootScope.$on('showCowerBackground', function(){
+      if($scope.showCover){
+        $scope.showCover = false;
+      } else {
+        $scope.showCover = true;
+      }
+    });
+
     $scope.steps = {
       step1: {
         show: true,
@@ -40,7 +49,7 @@ angular.module('jeopardy')
         QuestionContentFactory.generateContent();
       }
     };
-    
+
     $scope.generateContent();
   })
   .factory('QuestionContentFactory', function(){

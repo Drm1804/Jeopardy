@@ -6,18 +6,16 @@ angular.module('jeopardy')
         templateUrl: 'app/main/main.html'
       })
   })
-  .controller('MainController', function ($scope, hotkeys, $platform) {
+  .controller('MainController', function ($scope, $rootScope, hotkeys, $platform) {
     $scope.showCover = true;
     $scope.dataQuestion = {};
-    hotkeys.add({
-      combo: 'q',
-      description: 'This one goes to 11',
-      callback: function () {
-        if ($scope.showCover) {
-          $scope.showCover = false;
-        } else {
-          $scope.showCover = true;
-        }
+
+
+    $rootScope.$on('showCowerBackground', function(){
+      if($scope.showCover){
+        $scope.showCover = false;
+      } else {
+        $scope.showCover = true;
       }
     });
 

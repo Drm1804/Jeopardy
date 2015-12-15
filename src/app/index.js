@@ -6,4 +6,14 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys'])
   })
   .config(function($urlRouterProvider){
     $urlRouterProvider.otherwise('/');
+  })
+  .controller('EventController', function(hotkeys, $scope, $rootScope){
+
+
+    hotkeys.add({
+      combo: 'q',
+      callback: function () {
+        $rootScope.$broadcast('showCowerBackground');
+      }
+    });
   });
