@@ -10,9 +10,10 @@
   "question2": {
     "mainDisp": "Вопрос  2",
     "path": "question2",
-    "questionType": "text",
-    "question": "2Это очень сложный вопрос. У него много текста. У него много текста. У него многотекста. Но вопрос по-прежнему один, какого черта?",
-    "answer": "Это был очень сложный ответ",
+    "questionType": "img",
+    "dataImg": "app/img/sutkin.jpg",
+    "question": "2 О чем нам рассказывает, Валера? ",
+    "answer": "хм ...",
     "show": "true"
   },
   "question3": {
