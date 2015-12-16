@@ -44,7 +44,7 @@ html, body{
 .question-text{
   color: #fff7b2;
   text-shadow: 1px 1px 1px #000;
-  font-size: 5rem;
+  font-size: 6rem;
   padding: 0 20%;
 }
 .cover-bg {
@@ -70,9 +70,11 @@ html, body{
   box-shadow: 1px 1px 1px #000;
   font-size: 2rem;
 }
+
 .main-item:hover{
   color: #fff7b2;
   background: rgba(255, 274, 178, 0.7);
+  cursor: pointer;
 }
 
 

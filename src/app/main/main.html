@@ -3,7 +3,7 @@
     <h1 class="cover-text">Капитал шоу <br/> Своя <br/> Когда <br/> Миллионером</h1>
   </div>
   <div class="margin">
-    <a class="main-item text" ui-sref="question({path: item.path})" ng-repeat="item in dataQuestion">
+    <a class="main-item text" ng-click="nextQuestion()" ng-repeat="item in dataQuestion">
       {{item.mainDisp}}
     </a>
   </div>
