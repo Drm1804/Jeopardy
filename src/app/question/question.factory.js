@@ -34,7 +34,7 @@ angular.module('jeopardy')
         } else if (step === 'step2' && typeContent === 'video') {
 
           var returnData = $sce.trustAsHtml('<div class="step-cell">' +
-            '<video src="' + dataContent + '" width="720" height="540" controls />' +
+            '<video src="' + dataContent + '" width="720" height="540" autoplay controls />' +
             '</div>');
 
           return returnData;
