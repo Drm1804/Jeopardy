@@ -5,13 +5,13 @@
     "questionType": "text",
     "question": "Это очень сложный вопрос. У него много текста. У него много текста. У него многотекста. Но вопрос по-прежнему один, какого черта?",
     "answer": "Так сложилось... Ничего личного...",
-    "answered": false
+    "answered": true
   },
   "question2": {
     "mainDisp": "Вопрос 2",
     "path": "question2",
-    "questionType": "img",
-    "question": "Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
+    "questionType": "text",
+    "question": "Это очень сложный вопрос. У него много текста. У него много текста. У него многотекста. Но вопрос по-прежнему один, какого черта?",
     "answer": "Это был очень сложный ответ",
     "answered": false
   },
@@ -24,6 +24,62 @@
     "answered": false
   },
   "question4": {
+    "mainDisp": "Вопрос 4",
+    "path": "question4",
+    "questionType": "performance",
+    "question": "Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
+    "answer": "Это был очень сложный ответ",
+    "answered": false
+  },
+  "question5": {
+    "mainDisp": "Вопрос 4",
+    "path": "question4",
+    "questionType": "performance",
+    "question": "Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
+    "answer": "Это был очень сложный ответ",
+    "answered": false
+  },
+  "question6": {
+    "mainDisp": "Вопрос 4",
+    "path": "question4",
+    "questionType": "performance",
+    "question": "Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
+    "answer": "Это был очень сложный ответ",
+    "answered": false
+  },
+  "question7": {
+    "mainDisp": "Вопрос 4",
+    "path": "question4",
+    "questionType": "performance",
+    "question": "Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
+    "answer": "Это был очень сложный ответ",
+    "answered": false
+  },
+  "question8": {
+    "mainDisp": "Вопрос 4",
+    "path": "question4",
+    "questionType": "performance",
+    "question": "Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
+    "answer": "Это был очень сложный ответ",
+    "answered": false
+  },
+  "question9": {
+    "mainDisp": "Вопрос 4",
+    "path": "question4",
+    "questionType": "performance",
+    "question": "Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
+    "answer": "Это был очень сложный ответ",
+    "answered": false
+  },
+  "question10": {
+    "mainDisp": "Вопрос 4",
+    "path": "question4",
+    "questionType": "performance",
+    "question": "Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
+    "answer": "Это был очень сложный ответ",
+    "answered": false
+  },
+  "question11": {
     "mainDisp": "Вопрос 4",
     "path": "question4",
     "questionType": "performance",

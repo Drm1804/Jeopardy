@@ -10,22 +10,26 @@ angular.module('jeopardy')
 
     $scope.dataQuestion = {};
 
-    $scope.nextQuestion = function(){
+    $scope.nextQuestion = function(bool){
 
-      var fistNotAnsveredQuestion = '';
+      if(!bool){
+        var fistNotAnsveredQuestion = '';
 
-      // Ищем первый неотвеченный вопрос
+        // Ищем первый неотвеченный вопрос
 
-      for(var item in $scope.dataQuestion){
-        if(!$scope.dataQuestion[item].answered){
-          fistNotAnsveredQuestion = $scope.dataQuestion[item].path;
-          break;
+        for(var item in $scope.dataQuestion){
+          if(!$scope.dataQuestion[item].answered){
+            fistNotAnsveredQuestion = $scope.dataQuestion[item].path;
+            break;
+          }
         }
+
+        //return fistNotAnsveredQuestion;
+
+        $state.go('question', {path: fistNotAnsveredQuestion});
       }
 
-      //return fistNotAnsveredQuestion;
 
-      $state.go('question', {path: fistNotAnsveredQuestion});
     };
 
 

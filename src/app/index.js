@@ -23,7 +23,6 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys'])
     hotkeys.add({
       combo: 'q',
       callback: function () {
-        console.log('q');
         $rootScope.$broadcast('showCowerBackground');
 
       }
@@ -33,7 +32,6 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys'])
     hotkeys.add({
       combo: 'a',
       callback: function () {
-        console.log('a');
         $rootScope.$broadcast('goFistStep');
       }
     });
@@ -42,14 +40,21 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys'])
     hotkeys.add({
       combo: 's',
       callback: function () {
-        console.log('s');
         $rootScope.$broadcast('goSecondStep');
+      }
+    });
+
+    // Перейти на третий шаг вопроса
+    hotkeys.add({
+      combo: 'd',
+      callback: function () {
+        $rootScope.$broadcast('goThirdStep');
       }
     });
 
     // Перейти выйти из вопроса, перейти на главную и записать изменения данных в LocalStorage
     hotkeys.add({
-      combo: 'd',
+      combo: 'f',
       callback: function () {
         $rootScope.$broadcast('goExitQuestion');
       }

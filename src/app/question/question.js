@@ -26,7 +26,13 @@ angular.module('jeopardy')
         show: false,
         step: 'step2',
         content: ''
+      },
+      step3: {
+        show: false,
+        step: 'step3',
+        content: ''
       }
+
     };
 
 
@@ -71,6 +77,13 @@ angular.module('jeopardy')
       $scope.steps.step2.show = true;
     });
 
+    $rootScope.$on('goThirdStep', function(){
+      for(var item in $scope.steps){
+        $scope.steps[item].show = false;
+      }
+      $scope.steps.step3.show = true;
+    });
+
     $rootScope.$on('goExitQuestion', function(){
       for(var item in $scope.steps){
         $scope.steps[item].show = false;
@@ -99,18 +112,25 @@ angular.module('jeopardy')
         if(step === 'step1' && typeContent === 'text'){
 
           var returnData = $sce.trustAsHtml('<div class="step-cell">' +
+            '<p class="question-text">Текстовый вопрос</p> ' +
+            '</div>');
+
+          return returnData;
+        } else if(step === 'step2' && typeContent === 'text') {
+
+          var returnData = $sce.trustAsHtml('<div class="step-cell">' +
             '<p class="question-text">'+dataQuestion+'</p> ' +
             '</div>');
 
           return returnData;
-        } else if(step === 'step2') {
+
+        } else if (step === 'step3'){
 
           var returnData = $sce.trustAsHtml('<div class="step-cell">' +
             '<p class="question-text">'+dataAnswer+'</p> ' +
             '</div>');
 
           return returnData;
-
         }
       }
     }
