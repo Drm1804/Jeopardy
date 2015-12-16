@@ -4,7 +4,7 @@ angular.module('jeopardy')
   .config(function ($stateProvider) {
     $stateProvider
       .state('question', {
-        url: '/question/:path',
+        url: '/question/:path/:clickPath',
         templateUrl: 'app/question/question.html'
       })
   })
@@ -12,6 +12,7 @@ angular.module('jeopardy')
     $scope.showCover = false;
 
     $scope.path = $state.params.path;
+    $scope.clickPath = $state.params.clickPath;
     $scope.dataQuestion = {};
 
 
@@ -88,6 +89,11 @@ angular.module('jeopardy')
       for(var item in $scope.steps){
         $scope.steps[item].show = false;
       }
+
+      $platform.checkClickedItem( $scope.clickPath);
+
+      $platform.hideAnsweredQuestion( $scope.path);
+
       $state.go('main')
     });
 
@@ -104,7 +110,7 @@ angular.module('jeopardy')
 
   })
   .factory('QuestionContentFactory', function($sce){
-    var _this = this;
+
 
     return{
       generateContent: function(path, step, typeContent, dataQuestion, dataAnswer){

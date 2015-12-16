@@ -7,7 +7,7 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys', 'ngStorage'])
   .config(function($urlRouterProvider){
     $urlRouterProvider.otherwise('/');
   })
-  .controller('EventController', function(hotkeys, $scope, $rootScope){
+  .controller('EventController', function(hotkeys, $scope, $rootScope, $platform){
 
     $scope.showCover = true;
 
@@ -17,6 +17,12 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys', 'ngStorage'])
       } else {
         $scope.showCover = true;
       }
+    });
+
+    $rootScope.$on('hardReset', function(){
+
+      console.log('Hard reset!!!!!!!!!!!!!!!');
+      $platform.clearLocalStorageData();
     });
 
     // Показать/скрыть картинку с логотипом программы
@@ -63,7 +69,7 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys', 'ngStorage'])
 
     // Сбросить весь прогрес игры, и заново загрузить информацию с вопросами
     hotkeys.add({
-      combo: 'z+left+up+right',
+      combo: 'z+right',
       callback: function () {
         $rootScope.$broadcast('hardReset');
       }

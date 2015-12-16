@@ -3,7 +3,7 @@
     <h1 class="cover-text">Капитал шоу <br/> Своя <br/> Когда <br/> Миллионером</h1>
   </div>
   <div class="margin">
-    <a class="main-item text"  ng-repeat="item in dataQuestion" ng-class="{true: 'answered', false: ''}[item.answered]"  ng-click="nextQuestion(item.answered)">
+    <a class="main-item text"  ng-repeat="item in dataQuestion" ng-class="{true: 'answered', false: ''}[item.answered]"  ng-click="nextQuestion(item.answered, item)">
       {{item.mainDisp}}
     </a>
   </div>

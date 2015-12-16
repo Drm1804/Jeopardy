@@ -41,7 +41,6 @@ angular.module('jeopardy')
 
             // Еали data пустая, значи вопрос на чтение
             if (data == undefined) {
-              console.log($localStorage.fistStart)
               if ($localStorage.fistStart == undefined || $localStorage.fistStart == true) {
 
                 // Помечаем, что первый запуск состоялся
@@ -77,8 +76,6 @@ angular.module('jeopardy')
               // Первый запуск
               //**************
 
-
-              console.log('Первый запуск')
               _this.returnDataFromJson()
                 .then(function (resp) {
                   var tempArr = {};
@@ -97,6 +94,7 @@ angular.module('jeopardy')
                   dfd.resolve(dataToSendCtrl)
                 });
             } else {
+
               //********************
               // Последующие запуски
               //********************
@@ -105,18 +103,41 @@ angular.module('jeopardy')
               var dataAnswered = _this.returnDataAnsweredFromLS();
               var dataToSendCtrl = {};
 
-
-              console.log(dataAnswered)
               for (var item in data) {
                 dataToSendCtrl[item] = data[item];
                 dataToSendCtrl[item].answered = dataAnswered[item];
               }
 
-
-
               dfd.resolve(dataToSendCtrl);
             }
             return dfd.promise;
+          },
+
+          checkClickedItem: function(path){
+            var _this = this;
+
+            var data = _this.returnDataAnsweredFromLS();
+
+            data[path] = true;
+
+            _this.writeDataAnsweredToLS(data);
+          },
+
+          hideAnsweredQuestion: function(path){
+            var _this = this;
+
+            var data = _this.returnDataFromLS();
+
+            data[path].show = false;
+
+            _this.writeDataToLS(data);
+
+          },
+
+          clearLocalStorageData: function(){
+            delete $localStorage.dataAnswered;
+            delete $localStorage.dataQuestion;
+            delete $localStorage.fistStart;
           }
 
         }

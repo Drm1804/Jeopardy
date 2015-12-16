@@ -10,7 +10,9 @@ angular.module('jeopardy')
 
     $scope.dataQuestion = {};
 
-    $scope.nextQuestion = function(bool){
+    $scope.nextQuestion = function(bool, element){
+
+      console.log(element)
 
       if(!bool){
         var fistNotAnsveredQuestion = '';
@@ -18,13 +20,13 @@ angular.module('jeopardy')
         // Ищем первый неотвеченный вопрос
 
         for(var item in $scope.dataQuestion){
-          if(!$scope.dataQuestion[item].answered){
+          if($scope.dataQuestion[item].show){
             fistNotAnsveredQuestion = $scope.dataQuestion[item].path;
             break;
           }
         }
 
-        $state.go('question', {path: fistNotAnsveredQuestion});
+        $state.go('question', {path: fistNotAnsveredQuestion, clickPath: element.path});
       }
 
 
