@@ -32,6 +32,11 @@ angular.module('jeopardy')
         show: false,
         step: 'step3',
         content: ''
+      },
+      step4: {
+        show: false,
+        step: 'step4',
+        content: ''
       }
 
     };
@@ -46,6 +51,7 @@ angular.module('jeopardy')
         .then(function(resp){
           $scope.dataQuestion = resp[$scope.path];
           $scope.generateContent();
+
         })
     };
     $scope.getData();
@@ -85,6 +91,13 @@ angular.module('jeopardy')
       $scope.steps.step3.show = true;
     });
 
+    $rootScope.$on('goFourthStep', function(){
+      for(var item in $scope.steps){
+        $scope.steps[item].show = false;
+      }
+      $scope.steps.step4.show = true;
+    });
+
     $rootScope.$on('goExitQuestion', function(){
       for(var item in $scope.steps){
         $scope.steps[item].show = false;
@@ -99,15 +112,15 @@ angular.module('jeopardy')
 
     $scope.generateContent = function(){
       for(var item in $scope.steps){
-        var factoryResp = QuestionContentFactory.generateContent($scope.path, $scope.steps[item].step, $scope.dataQuestion.questionType, $scope.dataQuestion.question, $scope.dataQuestion.answer);
+        var factoryResp = QuestionContentFactory.generateContent($scope.path, $scope.steps[item].step, $scope.dataQuestion.questionType, $scope.dataQuestion.question, $scope.dataQuestion.answer, $scope.dataQuestion.dataContent, $scope.dataQuestion.prelude);
 
         $scope.steps[item].content = factoryResp;
 
-        console.log($scope.steps)
       }
+
     };
 
 
-  })
+  });
 
 

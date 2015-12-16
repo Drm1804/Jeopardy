@@ -58,9 +58,17 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys', 'ngStorage'])
       }
     });
 
-    // Перейти выйти из вопроса, перейти на главную и записать изменения данных в LocalStorage
+    // Перейти на четвертый шаг вопроса
+
     hotkeys.add({
       combo: 'f',
+      callback: function () {
+        $rootScope.$broadcast('goFourthStep');
+      }
+    });
+    // Перейти выйти из вопроса, перейти на главную и записать изменения данных в LocalStorage
+    hotkeys.add({
+      combo: 'g',
       callback: function () {
         $rootScope.$broadcast('goExitQuestion');
       }

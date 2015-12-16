@@ -5,19 +5,28 @@ angular.module('jeopardy')
 
 
     return {
-      generateContent: function (path, step, typeContent, dataQuestion, dataAnswer) {
+      generateContent: function (path, step, typeContent, question, answer, dataContent, prelude) {
 
-        if (step === 'step1' && typeContent === 'text') {
+        if(step === 'step1'){
 
           var returnData = $sce.trustAsHtml('<div class="step-cell">' +
-            '<p class="question-text">Текстовый вопрос</p> ' +
+            '<p class="question-text">'+prelude+'</p> ' +
             '</div>');
 
           return returnData;
+
         } else if (step === 'step2' && typeContent === 'text') {
 
           var returnData = $sce.trustAsHtml('<div class="step-cell">' +
-            '<p class="question-text">' + dataQuestion + '</p> ' +
+            '<p class="question-text">'+ question +'</p> ' +
+            '</div>');
+
+          return returnData;
+
+        } else if(step === 'step2' && typeContent === 'image') {
+
+          var returnData = $sce.trustAsHtml('<div class="step-cell">' +
+            '<img class="question-img" src="'+ dataContent+'"/> ' +
             '</div>');
 
           return returnData;
@@ -25,7 +34,19 @@ angular.module('jeopardy')
         } else if (step === 'step3') {
 
           var returnData = $sce.trustAsHtml('<div class="step-cell">' +
-            '<p class="question-text">' + dataAnswer + '</p> ' +
+            '<p class="question-text">'+ question +'</p> ' +
+            '</div>');
+
+          return returnData;
+
+        }
+        else if (step === 'step4') {
+
+
+          console.log(answer);
+
+          var returnData = $sce.trustAsHtml('<div class="step-cell">' +
+            '<p class="question-text">'+ answer +'</p> ' +
             '</div>');
 
           return returnData;
