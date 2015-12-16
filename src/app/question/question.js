@@ -41,7 +41,7 @@ angular.module('jeopardy')
 
 
     $scope.getData = function(){
-      $platform.returnData()
+      $platform.returnDataFromJson()
         .then(function(resp){
           $scope.dataQuestion = resp[$scope.path];
           $scope.generateContent();

@@ -24,8 +24,6 @@ angular.module('jeopardy')
           }
         }
 
-        //return fistNotAnsveredQuestion;
-
         $state.go('question', {path: fistNotAnsveredQuestion});
       }
 
@@ -33,19 +31,14 @@ angular.module('jeopardy')
     };
 
 
-
-
     $scope.getData = function(){
-      $platform.returnData()
+      $platform.returnDataGame()
         .then(function(resp){
           $scope.dataQuestion = resp;
           console.log($scope.dataQuestion);
-        })
+        });
     };
     $scope.getData();
 
 
   });
-
-
-//ui-sref="question({path: item.path})"

@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('jeopardy', ['ui.router', 'cfp.hotkeys'])
+angular.module('jeopardy', ['ui.router', 'cfp.hotkeys', 'ngStorage'])
   .constant('settingsConst', {
     JSONUrl: 'app/data.json'
   })
   .config(function($urlRouterProvider){
     $urlRouterProvider.otherwise('/');
   })
-  .controller('EventController', function(hotkeys, $scope, $rootScope, $log){
+  .controller('EventController', function(hotkeys, $scope, $rootScope){
 
     $scope.showCover = true;
 
@@ -61,7 +61,7 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys'])
     });
 
 
-    // Сбросить весь прогрус игры, и заново загрузить информацию с вопросами
+    // Сбросить весь прогрес игры, и заново загрузить информацию с вопросами
     hotkeys.add({
       combo: 'z+left+up+right',
       callback: function () {
