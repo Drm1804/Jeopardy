@@ -61,4 +61,12 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys'])
     });
 
 
+    // Сбросить весь прогрус игры, и заново загрузить информацию с вопросами
+    hotkeys.add({
+      combo: 'z+left+up+right',
+      callback: function () {
+        $rootScope.$broadcast('hardReset');
+      }
+    });
+
   });
