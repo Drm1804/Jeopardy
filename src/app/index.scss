@@ -3,26 +3,27 @@
 // bower:scss
 // endbower
 
-html, body{
+html, body {
   min-height: 100%;
 }
 
-.background{
+.background {
   background: url(../data/bg.jpg) 50% 50% no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   height: 100%;
 }
-.margin{
+
+.margin {
   margin: 5% 10%;
 }
-.text{
+
+.text {
   color: #fff7b2;
   text-shadow: 1px 1px 1px #000;
 }
 
-
-.step{
+.step {
   position: absolute;
   top: 0;
   left: 0;
@@ -30,23 +31,27 @@ html, body{
   height: 100%;
   text-align: center;
 }
-.step-table{
+
+.step-table {
   display: table;
   width: 100%;
   height: 100%;
   vertical-align: middle;
 }
-.step-cell{
+
+.step-cell {
   vertical-align: middle;
   height: 100%;
   display: table-cell;
 }
-.question-text{
+
+.question-text {
   color: #fff7b2;
   text-shadow: 1px 1px 1px #000;
   font-size: 6rem;
   padding: 0 20%;
 }
+
 .cover-bg {
   width: 100%;
   height: 100%;
@@ -60,7 +65,39 @@ html, body{
   text-align: center;
   top: 50%;
   position: relative;
-  margin-top: -80px;
+  margin-top: -200px;
+  color: #fff7b2;
+  text-shadow: 1px 2px 4px #000;
+  font-size: 8rem;
+
+  //transform-origin: 50% 50% 100px;
+
+  animation-name: rotation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.cover-text > .small {
+  font-size: 4rem;
+  color: #fff7b2;
+  text-align: left;
+}
+
+.cover-text > .middle {
+  font-size: 6rem;
 }
 
 .main-item {
@@ -72,10 +109,12 @@ html, body{
   position: relative;
   display: inline-block;
 }
+
 .main-item.answered {
   opacity: .5;
   cursor: default;
 }
+
 .main-item.answered:before {
   content: "";
   width: 100%;
@@ -91,6 +130,7 @@ html, body{
   transform: rotate(30deg);
 
 }
+
 .main-item.answered:after {
   content: "";
   width: 100%;
@@ -106,18 +146,19 @@ html, body{
   transform: rotate(-30deg);
 
 }
-.main-item:hover{
+
+.main-item:hover {
   color: #fff7b2;
   background: rgba(255, 274, 178, 0.7);
   cursor: pointer;
 }
+
 .main-item.answered:hover {
   color: #fff7b2;
   text-decoration: none;
   background: transparent !important;
   cursor: default;
 }
-
 
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your sass files automatically */
