@@ -8,13 +8,12 @@ angular.module('jeopardy')
         templateUrl: 'app/question/question.html'
       })
   })
-  .controller('QuestionController', function($scope, $rootScope, hotkeys, $state, QuestionContentFactory, $platform){
+  .controller('QuestionController', function ($scope, $timeout, $rootScope, hotkeys, $state, QuestionContentFactory, $platform) {
     $scope.showCover = false;
 
     $scope.path = $state.params.path;
     $scope.clickPath = $state.params.clickPath;
     $scope.dataQuestion = {};
-
 
 
     $scope.steps = {
@@ -42,13 +41,14 @@ angular.module('jeopardy')
     };
 
 
+    $scope.audio = {
+      'gong': false
+    };
 
 
-
-
-    $scope.getData = function(){
+    $scope.getData = function () {
       $platform.returnDataFromJson()
-        .then(function(resp){
+        .then(function (resp) {
           $scope.dataQuestion = resp[$scope.path];
           $scope.generateContent();
 
@@ -61,57 +61,62 @@ angular.module('jeopardy')
     // Перехватываем события
     //
 
-    $rootScope.$on('showCowerBackground', function(){
-      if($scope.showCover){
+    $rootScope.$on('showCowerBackground', function () {
+      if ($scope.showCover) {
         $scope.showCover = false;
       } else {
         $scope.showCover = true;
       }
     });
 
-    $rootScope.$on('goFistStep', function(){
-      for(var item in $scope.steps){
+    $rootScope.$on('goFistStep', function () {
+      for (var item in $scope.steps) {
         $scope.steps[item].show = false;
       }
       $scope.steps.step1.show = true;
-
+      $scope.audio.gong = false;
     });
 
-    $rootScope.$on('goSecondStep', function(){
-      for(var item in $scope.steps){
+    $rootScope.$on('goSecondStep', function () {
+      for (var item in $scope.steps) {
         $scope.steps[item].show = false;
       }
       $scope.steps.step2.show = true;
+      $scope.audio.gong = false;
     });
 
-    $rootScope.$on('goThirdStep', function(){
-      for(var item in $scope.steps){
+    $rootScope.$on('goThirdStep', function () {
+      for (var item in $scope.steps) {
         $scope.steps[item].show = false;
       }
-      $scope.steps.step3.show = true;
+      $timeout(function () {
+        $scope.steps.step3.show = true;
+      }, 7000);
+      $scope.audio.gong = true;
     });
 
-    $rootScope.$on('goFourthStep', function(){
-      for(var item in $scope.steps){
+    $rootScope.$on('goFourthStep', function () {
+      for (var item in $scope.steps) {
         $scope.steps[item].show = false;
       }
       $scope.steps.step4.show = true;
+      $scope.audio.gong = false;
     });
 
-    $rootScope.$on('goExitQuestion', function(){
-      for(var item in $scope.steps){
+    $rootScope.$on('goExitQuestion', function () {
+      for (var item in $scope.steps) {
         $scope.steps[item].show = false;
       }
 
-      $platform.checkClickedItem( $scope.clickPath);
+      $platform.checkClickedItem($scope.clickPath);
 
-      $platform.hideAnsweredQuestion( $scope.path);
+      $platform.hideAnsweredQuestion($scope.path);
 
       $state.go('main')
     });
 
-    $scope.generateContent = function(){
-      for(var item in $scope.steps){
+    $scope.generateContent = function () {
+      for (var item in $scope.steps) {
         var factoryResp = QuestionContentFactory.generateContent($scope.path, $scope.steps[item].step, $scope.dataQuestion.questionType, $scope.dataQuestion.question, $scope.dataQuestion.answer, $scope.dataQuestion.dataContent, $scope.dataQuestion.prelude);
 
         $scope.steps[item].content = factoryResp;

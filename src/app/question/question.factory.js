@@ -18,7 +18,7 @@ angular.module('jeopardy')
         } else if (step === 'step2' && typeContent === 'text') {
 
           var returnData = $sce.trustAsHtml('<div class="step-cell">' +
-            '<p class="question-text">' + question + '</p> ' +
+            '<p class="question-text">Текстовый вопросы</p> ' +
             '</div>');
 
           return returnData;
