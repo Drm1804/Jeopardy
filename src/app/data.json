@@ -3,9 +3,9 @@
     "mainDisp": "Вопрос  1",
     "path": "question1",
     "questionType": "text",
-    "question": "1Это очень сложный вопрос. У него много текста. У него много текста. У него многотекста. Но вопрос по-прежнему один, какого черта?",
-    "answer": "Так сложилось... Ничего личного...",
-    "prelude": "Шутка за 300",
+    "question": "Назовите минимальное количество программистов, способное поднять антенну РДФ",
+    "answer": "Шесть",
+    "prelude": "Пацаны за 50",
     "show": "true"
   },
   "question2": {
@@ -13,93 +13,216 @@
     "path": "question2",
     "questionType": "image",
     "dataContent": "data/sutkin.jpg",
-    "question": "2 О чем нам рассказывает, Валера? ",
-    "answer": "хм ...",
-    "prelude": "Бабы за полтос",
+    "question": "Назовите сотрудников и название праздника.",
+    "answer": "Мелихова и Исаев. 8 марта 2011",
+    "prelude": "Вопрос от спонсора за 100",
     "show": "true"
   },
   "question3": {
     "mainDisp": "Вопрос  3",
     "path": "question3",
-    "questionType": "video",
-    "dataContent": "data/enot.mp4",
-    "question": "3Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
-    "answer": "Это был очень сложный ответ",
-    "prelude": "Шутка за 300",
+    "questionType": "image",
+    "question": "Только что вы увидели  один из технологических процессов на предприятии РТО “НПС”. Назовите ЕГО.",
+    "answer": "Разработка",
+    "prelude": "Сотрудники на 200",
     "show": "true"
   },
   "question4": {
     "mainDisp": "Вопрос  4",
     "path": "question4",
-    "questionType": "audio",
-    "dataContent": "data/Lindsey_Stirling.mp3",
-    "question": "Вы это слышали?",
-    "answer": "...",
-    "prelude": "Угадай мелодию",
+    "questionType": "performance",
+    "question": "Бутыль масла и стакан сахара именно ЭТОГО сотрудника съели без его ведома в 2015 г на предприятии. ",
+    "answer": "Волошкевич А.С.",
+    "prelude": "Вор за 300",
     "show": "true"
   },
   "question5": {
     "mainDisp": "Вопрос  5",
     "path": "question5",
-    "questionType": "performance",
-    "dataContent": "data/Lindsey_Stirling.mp3",
-    "question": "Зачем эти люди вышли на сцену?",
-    "answer": "Правильно, ради приза!",
-    "prelude": "Внимание на сцену",
+    "questionType": "text",
+    "question": "Глаз именно ЭТОГО сотрудника первым контактировал со стружкой курсовой антенны в Кургане.",
+    "answer": "Исаев Д.В",
+    "prelude": "Жизнь-боль за 500",
     "show": "true"
   },
   "question6": {
     "mainDisp": "Вопрос  6",
     "path": "question6",
-    "questionType": "performance",
-    "question": "6Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
-    "answer": "Это был очень сложный ответ",
-    "prelude": "Внимание на сцену (Нет звука)",
+    "questionType": "image",
+    "question": "Назовите слово",
+    "answer": "Трактор",
+    "prelude": "Шутка за 300",
     "show": "true"
   },
   "question7": {
     "mainDisp": "Вопрос  7",
     "path": "question7",
-    "questionType": "text",
-    "question": "7Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
+    "questionType": "performance",
+    "question": "Сколько начальников на одного сотрудника",
     "answer": "Это был очень сложный ответ",
-    "prelude": "Шутка за 300",
+    "prelude": "Шутка-мишутка",
     "show": "true"
   },
   "question8": {
     "mainDisp": "Вопрос  8",
     "path": "question8",
     "questionType": "text",
-    "question": "8Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
-    "answer": "Это был очень сложный ответ",
-    "prelude": "Шутка за 300",
+    "question": "Сколько сотрудниц получили травмы на праздниках РТО “НПС” от Мунирова Нигаматула Виталивича. Назовите ВСЕХ.",
+    "answer": "5 Мелихова, Демина, Пустырникова, Аня, Кристина",
+    "prelude": "Жизнь-боль за 900",
     "show": "true"
   },
   "question9": {
     "mainDisp": "Вопрос  9",
     "path": "question9",
-    "questionType": "text",
-    "question": "9Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
-    "answer": "Это был очень сложный ответ",
+    "questionType": "image",
+    "question": "Назовите сотрудников и название праздника.",
+    "answer": "Демина и Фролов. 8 марта 2014",
     "prelude": "Шутка за 300",
     "show": "true"
   },
   "question10": {
     "mainDisp": "Вопрос 10",
     "path": "question10",
-    "questionType": "text",
-    "question": "10Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
-    "answer": "Это был очень сложный ответ",
-    "prelude": "Шутка за 300",
+    "questionType": "performance",
+    "question": "Сколько диоптрий в левом очке Шуленка?",
+    "answer": "Девять",
+    "prelude": "Миньон за 500",
     "show": "true"
   },
   "question11": {
     "mainDisp": "Вопрос 11",
     "path": "question11",
     "questionType": "text",
-    "question": "11Это очень сложный вопрос. У него много текста.  У него много текста. У него много текста.",
+    "question": "Месяц и год образования РТО “НПС”",
+    "answer": "Май 2003",
+    "prelude": "История за 1000",
+    "show": "true"
+  },
+  "question12": {
+    "mainDisp": "Вопрос 12",
+    "path": "question12",
+    "questionType": "image",
+    "question": "Назовите сотрудника и его прозвище.",
+    "answer": "Антон, Шрек",
+    "prelude": "Сотрудник на 300",
+    "show": "true"
+  },
+  "question13": {
+    "mainDisp": "Вопрос 13",
+    "path": "question13",
+    "questionType": "audio",
+    "question": "Назовите продукцию РТО “НПС”, воспроизводящее данный звук",
+    "answer": "Маркер",
+    "prelude": "Устройство за 300",
+    "show": "true"
+  },
+  "question14": {
+    "mainDisp": "Вопрос 14",
+    "path": "question14",
+    "questionType": "performance",
+    "question": "Назовите сотрудника, которому принадлежит выражение:”Гребёшь и бухаешь”? ",
+    "answer": "Гридневский",
+    "prelude": "Фраза за 300",
+    "show": "true"
+  },
+  "question15": {
+    "mainDisp": "Вопрос 15",
+    "path": "question15",
+    "questionType": "image",
+    "question": "Только что вы увидели  один из технологических процессов на предприятии РТО “НПС”. Назовите ЕГО.",
+    "answer": "Ввод в строй RDF",
+    "prelude": "Бизнес-процессы за 700",
+    "show": "true"
+  },
+  "question16": {
+    "mainDisp": "Вопрос 16",
+    "path": "question16",
+    "questionType": "image",
+    "question": "Только что вы увидели один из технологических процессов на предприятии РТО “НПС”. Назовите ЕГО.",
+    "answer": "Установка метео-защиты",
+    "prelude": "Бизнес-процессы за 400",
+    "show": "true"
+  },
+  "question17": {
+    "mainDisp": "Вопрос 17",
+    "path": "question17",
+    "questionType": "image",
+    "question": "Что изображено на картинке",
+    "answer": "Капча",
+    "prelude": "Ребус за 200",
+    "show": "true"
+  },
+  "question18": {
+    "mainDisp": "Вопрос 18",
+    "path": "question18",
+    "questionType": "image",
+    "question": "Угадайте песню по нотам",
+    "answer": "В лесу родилась елочка",
+    "prelude": "Ребус за 600",
+    "show": "true"
+  },
+  "question19": {
+    "mainDisp": "Вопрос 19",
+    "path": "question19",
+    "questionType": "performance",
+    "question": "Расположите в правильном порядке",
+    "answer": "",
+    "prelude": "Бизнес-процессы за 600",
+    "show": "true"
+  },
+  "question20": {
+    "mainDisp": "Вопрос 20",
+    "path": "question20",
+    "questionType": "image",
+    "question": "Этот предмет скрыт на фото и лежит в черном ящике. Назовите его",
+    "answer": "Кепка",
+    "prelude": "Черный ящик за 700",
+    "show": "true"
+  },
+  "question21": {
+    "mainDisp": "Вопрос 21",
+    "path": "question21",
+    "questionType": "video",
+    "question": "Только что вы увидели  один из технологических процессов на предприятии РТО “НПС”. Назовите ЕГО.",
+    "answer": "Сдача по ТУ",
+    "prelude": "Бизнес-процессы за 400",
+    "show": "true"
+  },
+  "question22": {
+    "mainDisp": "Вопрос 22",
+    "path": "question22",
+    "questionType": "performance",
+    "question": "Назовите сотрудника и его должность.",
+    "answer": "Кириллов, Начальник АХЧ",
+    "prelude": "Сотрудники за 800",
+    "show": "true"
+  },
+  "question23": {
+    "mainDisp": "Вопрос 23",
+    "path": "question23",
+    "questionType": "video",
+    "question": "Назовите город",
+    "answer": "Магадан",
+    "prelude": "Ввод в строй за 200",
+    "show": "true"
+  },
+  "question24": {
+    "mainDisp": "Вопрос 24",
+    "path": "question24",
+    "questionType": "image",
+    "question": "Назовите устройство РТО “НПС”, воспроизводящее данный звук.",
+    "answer": "Полоса",
+    "prelude": "Черный ящик",
+    "show": "true"
+  },
+  "question25": {
+    "mainDisp": "Вопрос 25",
+    "path": "question25",
+    "questionType": "performance",
+    "question": "Сколько сотрудников РТО “НПС” умеет играть на гитаре?",
     "answer": "Это был очень сложный ответ",
-    "prelude": "Шутка за 300",
+    "prelude": "Сотрудники на 500",
     "show": "true"
   }
 }

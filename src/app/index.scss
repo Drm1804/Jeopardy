@@ -101,13 +101,15 @@ html, body {
 }
 
 .main-item {
-  padding: 43px;
+  padding: 65px 0;
   border: 1px solid #fff7b2;
   margin: 1px;
   box-shadow: 1px 1px 1px #000;
   font-size: 2rem;
   position: relative;
   display: inline-block;
+  width: 19%;
+  text-align: center;
 }
 
 .main-item.answered {
