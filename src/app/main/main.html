@@ -1,8 +1,13 @@
 <div ng-controller="MainController">
+  <div ng-if="musicPause" class="cover-bg background">
+    <h1 class="cover-text"><span style="font-size: 5em;">♫</span></h1>
+    <audio src="data/disco.mp3" autoplay loop></audio>
+  </div>
   <div ng-if="showCover" class="cover-bg background">
     <h1 class="cover-text"><span class="small">Капитал шоу</span> <br/> Своя? <br/> Когда? <br/> <span class="middle">Миллионером?</span></h1>
     <audio src="data/jingl.mp3" autoplay loop></audio>
   </div>
+
   <div class="margin">
     <a class="main-item text"
        ng-repeat="item in dataQuestion"

@@ -11,6 +11,8 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys', 'ngStorage'])
 
     $scope.showCover = true;
 
+    $scope.musicPause = false;
+
     $rootScope.$on('showCowerBackground', function(){
       if($scope.showCover){
         $scope.showCover = false;
@@ -19,11 +21,20 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys', 'ngStorage'])
       }
     });
 
+    $rootScope.$on('musicPause', function(){
+      if($scope.musicPause){
+        $scope.musicPause = false;
+      } else {
+        $scope.musicPause = true;
+      }
+    });
+
     $rootScope.$on('hardReset', function(){
 
       console.log('Hard reset!!!!!!!!!!!!!!!');
       $platform.clearLocalStorageData();
     });
+
 
     // Показать/скрыть картинку с логотипом программы
     hotkeys.add({
@@ -71,6 +82,15 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys', 'ngStorage'])
       combo: '.',
       callback: function () {
         $rootScope.$broadcast('goExitQuestion');
+      }
+    });
+
+    // Музыкальная пауза
+    hotkeys.add({
+      combo: 'p',
+      callback: function () {
+        console.log('p');
+        $rootScope.$broadcast('musicPause');
       }
     });
 
