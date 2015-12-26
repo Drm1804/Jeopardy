@@ -5,7 +5,7 @@ angular.module('jeopardy')
 
 
     return {
-      generateContent: function (path, step, typeContent, question, answer, dataContent, prelude) {
+      generateContent: function (path, step, typeContent, question, answer, dataContent, prelude, preludePerfomans) {
 
         if (step === 'step1') {
 
@@ -18,7 +18,7 @@ angular.module('jeopardy')
         } else if (step === 'step2' && typeContent === 'text') {
 
           var returnData = $sce.trustAsHtml('<div class="step-cell">' +
-            '<p class="question-text">Текстовый вопросы</p> ' +
+            '<p class="question-text">Текстовый вопрос</p> ' +
             '</div>');
 
           return returnData;
@@ -55,7 +55,7 @@ angular.module('jeopardy')
             return returnData;
           } else {
             var returnData = $sce.trustAsHtml('<div class="step-cell">' +
-              '<p class="question-text">' + question + '</p> ' +
+              '<p class="question-text">Внимание на сцену</p> ' +
               '</div>');
 
             return returnData;

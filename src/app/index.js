@@ -61,14 +61,14 @@ angular.module('jeopardy', ['ui.router', 'cfp.hotkeys', 'ngStorage'])
     // Перейти на четвертый шаг вопроса
 
     hotkeys.add({
-      combo: 'f',
+      combo: ',',
       callback: function () {
         $rootScope.$broadcast('goFourthStep');
       }
     });
     // Перейти выйти из вопроса, перейти на главную и записать изменения данных в LocalStorage
     hotkeys.add({
-      combo: 'g',
+      combo: '.',
       callback: function () {
         $rootScope.$broadcast('goExitQuestion');
       }

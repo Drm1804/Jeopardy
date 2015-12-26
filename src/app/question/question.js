@@ -8,7 +8,7 @@ angular.module('jeopardy')
         templateUrl: 'app/question/question.html'
       })
   })
-  .controller('QuestionController', function ($scope, $timeout, $rootScope, hotkeys, $state, QuestionContentFactory, $platform) {
+  .controller('QuestionController', function ($scope, $rootScope, hotkeys, $state, QuestionContentFactory, $platform) {
     $scope.showCover = false;
 
     $scope.path = $state.params.path;
@@ -89,9 +89,7 @@ angular.module('jeopardy')
       for (var item in $scope.steps) {
         $scope.steps[item].show = false;
       }
-      $timeout(function () {
-        $scope.steps.step3.show = true;
-      }, 7000);
+      $scope.steps.step3.show = true;
       $scope.audio.gong = true;
     });
 
